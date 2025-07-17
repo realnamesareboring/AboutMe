@@ -97,6 +97,7 @@ layout: default
 </section>
 
 <!-- Projects Section -->
+<!-- Projects Section -->
 <section id="projects" class="section">
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
@@ -104,11 +105,30 @@ layout: default
         <div class="project-card">
             <div class="project-image">{{ project.icon }}</div>
             <div class="project-content">
+                <!-- Clickable Project Title -->
+                {% if project.url %}
+                <h4>
+                    <a href="{{ project.url }}" 
+                       class="project-title-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Visit {{ project.title }} project">
+                        {{ project.title }}
+                    </a>
+                </h4>
+                {% else %}
                 <h4>{{ project.title }}</h4>
+                {% endif %}
+                
                 <p>{{ project.description }}</p>
                 <div class="project-links">
                     {% for link in project.links %}
-                    <a href="{{ link.url }}" class="project-link">{{ link.label }}</a>
+                    <a href="{{ link.url }}" 
+                       class="project-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        {{ link.label }}
+                    </a>
                     {% endfor %}
                 </div>
             </div>

@@ -120,6 +120,7 @@ skills:
 projects:
   - title: "ThreatHunter AI"
     icon: "🤖"
+    url: "https://github.com/yourusername/threathunter-ai"
     description: "Machine learning-powered threat detection system that analyzes network traffic patterns to identify advanced persistent threats in real-time."
     links:
       - label: "Demo"

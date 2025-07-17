@@ -1128,3 +1128,469 @@
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
         }
+/* Enhanced Contact Form Styles - Add to your existing style.css */
+
+/* Form Notifications */
+.form-notification {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 2px solid;
+    font-family: 'JetBrains Mono', monospace;
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.form-notification.success {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: var(--terminal-green);
+    color: var(--terminal-green);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.form-notification.error {
+    background: rgba(255, 0, 102, 0.1);
+    border-color: var(--accent-cyber);
+    color: var(--accent-cyber);
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.2);
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+}
+
+.notification-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.notification-message {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.notification-message a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.notification-message a:hover {
+    opacity: 0.8;
+}
+
+.notification-close {
+    background: none;
+    border: 1px solid currentColor;
+    color: inherit;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: currentColor;
+    color: var(--bg-primary);
+    transform: scale(1.1);
+}
+
+.form-notification.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Enhanced Submit Button States */
+.submit-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.submit-btn.loading {
+    position: relative;
+}
+
+.submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.submit-btn.success {
+    animation: successPulse 0.6s ease-out;
+}
+
+.submit-btn.error {
+    animation: errorShake 0.6s ease-out;
+}
+
+@keyframes spin {
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Enhanced Form Input States */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group.focused label {
+    color: var(--primary-cyber);
+}
+
+.form-group.focused label::before {
+    color: var(--cyber-blue);
+}
+
+.form-group input.valid,
+.form-group textarea.valid {
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: var(--accent-cyber);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.2);
+}
+
+/* Validation Icons */
+.form-group input.valid + .validation-icon,
+.form-group textarea.valid + .validation-icon {
+    content: '✓';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--terminal-green);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.form-group input.invalid + .validation-icon,
+.form-group textarea.invalid + .validation-icon {
+    content: '✗';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-cyber);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Add validation icons after inputs */
+.form-group input.valid::after,
+.form-group textarea.valid::after {
+    content: '✓';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--terminal-green);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+/* Character Counter for Textarea */
+.form-group.has-counter {
+    position: relative;
+}
+
+.form-group.has-counter::after {
+    content: attr(data-count);
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.form-group.has-counter.over-limit::after {
+    color: var(--accent-cyber);
+}
+
+/* Enhanced Hover Effects */
+.form-group input:hover:not(:focus),
+.form-group textarea:hover:not(:focus) {
+    border-color: var(--primary-cyber);
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.1);
+}
+
+/* Typing Animation for Placeholders */
+.form-group input[data-typing],
+.form-group textarea[data-typing] {
+    position: relative;
+}
+
+/* Focus Glow Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-cyber);
+    box-shadow: 
+        0 0 10px rgba(0, 255, 136, 0.2),
+        inset 0 0 10px rgba(0, 255, 136, 0.1);
+    background: var(--bg-primary);
+}
+
+/* Light Theme Enhancements */
+[data-theme="light"] .form-notification.success {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+    color: #059669;
+}
+
+[data-theme="light"] .form-notification.error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #dc2626;
+}
+
+[data-theme="light"] .submit-btn.loading::after {
+    border-top-color: #6366f1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .form-notification {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .notification-content {
+        gap: 0.8rem;
+    }
+    
+    .notification-close {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+    
+    .submit-btn.loading::after {
+        width: 14px;
+        height: 14px;
+        right: 0.8rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .form-notification,
+    .submit-btn,
+    .form-group input,
+    .form-group textarea {
+        animation: none;
+        transition: none;
+    }
+    
+    .submit-btn.loading::after {
+        animation: none;
+        content: '...';
+        border: none;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .form-notification {
+        border-width: 3px;
+    }
+    
+    .form-notification.success {
+        background: rgba(0, 255, 65, 0.2);
+    }
+    
+    .form-notification.error {
+        background: rgba(255, 0, 102, 0.2);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .form-notification,
+    .submit-btn.loading::after {
+        display: none;
+    }
+}
+/* Clickable Project Titles */
+.project-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.project-title-link:hover {
+    color: var(--primary-cyber);
+    transform: translateX(5px);
+}
+
+.project-title-link:hover::before {
+    content: '> ';
+    color: var(--cyber-blue);
+    font-family: 'JetBrains Mono', monospace;
+    position: absolute;
+    left: -15px;
+    animation: blinkCursor 1s infinite;
+}
+
+.project-title-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-cyber), var(--cyber-blue));
+    animation: expandLine 0.3s ease-out forwards;
+}
+
+/* Light theme support */
+[data-theme="light"] .project-title-link:hover {
+    color: #6366f1;
+}
+
+[data-theme="light"] .project-title-link:hover::before {
+    color: #8b5cf6;
+}
+
+[data-theme="light"] .project-title-link:hover::after {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+/* Animations */
+@keyframes blinkCursor {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Enhanced hover effect for entire project card when title is hovered */
+.project-card:has(.project-title-link:hover) {
+    transform: translateY(-15px);
+    border-color: var(--primary-cyber);
+    box-shadow: 0 30px 60px rgba(0, 255, 136, 0.15);
+}
+
+[data-theme="light"] .project-card:has(.project-title-link:hover) {
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.15);
+}
+
+/* Fallback for browsers that don't support :has() */
+.project-card .project-title-link:hover {
+    text-shadow: 0 0 10px var(--primary-cyber);
+}
+
+[data-theme="light"] .project-card .project-title-link:hover {
+    text-shadow: 0 0 10px #6366f1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-title-link:hover::before {
+        left: -10px;
+    }
+    
+    .project-title-link:hover {
+        transform: translateX(3px);
+    }
+}
+
+/* Accessibility improvements */
+.project-title-link:focus {
+    outline: 2px solid var(--primary-cyber);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+[data-theme="light"] .project-title-link:focus {
+    outline-color: #6366f1;
+}
+
+/* Cursor enhancement */
+.project-title-link {
+    cursor: pointer;
+}
+
+.project-title-link:hover {
+    cursor: pointer;
+}
