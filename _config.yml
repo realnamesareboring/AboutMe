@@ -1,7 +1,7 @@
 title: "Your Portfolio Title"
-description: "Your professional description"
-url: "https://yourusername.github.io"
-baseurl: "/your-repository-name"  # or "" if using custom domain
+description: "This is a responsive, professional portfolio website designed specifically for cybersecurity engineers and full-stack developers. It features a sleek cyber aesthetic with smooth animations, interactive elements, and a dual theme system (dark/light mode)."
+url: "https://realnamesareboring.github.io"
+baseurl: "/AboutMe"  # or "" if using custom domain
 
 author: "Your Name"
 twitter:
