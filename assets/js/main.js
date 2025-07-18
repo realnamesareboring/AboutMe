@@ -7,7 +7,7 @@ const CONTACT_FORM_CONFIG = {
         subject: 'entry.1626517995',
         message: 'entry.652504124'
     },
-    fallbackEmail: 'youremailgoeshere@gmail.com' //Email goes here
+    fallbackEmail: 'jose.l.torrico.85@gmail.com' // Updated your email
 };
 
 // Theme Toggle
@@ -92,7 +92,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Enhanced Form submission with Google Forms
+// =====================================================================================
+// CLEAN FORM SUBMISSION HANDLER - NO METADATA IN MESSAGE FIELD
+// =====================================================================================
+
 document.querySelector('.contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -101,7 +104,7 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
         name: formData.get('name'),
         email: formData.get('email'),
         subject: formData.get('subject'),
-        message: formData.get('message')
+        message: formData.get('message') // CLEAN message only - no metadata!
     };
     
     const submitBtn = this.querySelector('.submit-btn');
@@ -110,12 +113,12 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
     submitBtn.disabled = true;
     
     try {
-        // Submit to Google Form
+        // Submit CLEAN data to Google Forms (no metadata appended)
         const googleFormData = new FormData();
         googleFormData.append(CONTACT_FORM_CONFIG.fields.name, data.name);
         googleFormData.append(CONTACT_FORM_CONFIG.fields.email, data.email);
         googleFormData.append(CONTACT_FORM_CONFIG.fields.subject, data.subject);
-        googleFormData.append(CONTACT_FORM_CONFIG.fields.message, data.message + `\n\nSubmitted: ${new Date().toLocaleString()}\nFrom: ${window.location.href}`);
+        googleFormData.append(CONTACT_FORM_CONFIG.fields.message, data.message); // Clean message only!
         
         await fetch(`https://docs.google.com/forms/d/e/${CONTACT_FORM_CONFIG.formId}/formResponse`, {
             method: 'POST',

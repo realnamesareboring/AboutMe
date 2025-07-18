@@ -4,6 +4,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Future/optional build files
+Experimental/
+
 # Ruby/Bundler
 vendor/
 .bundle/
