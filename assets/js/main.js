@@ -7,7 +7,7 @@ const CONTACT_FORM_CONFIG = {
         subject: 'entry.1626517995',
         message: 'entry.652504124'
     },
-    fallbackEmail: 'jose.l.torrico.85@gmail.com' // Updated your email
+    fallbackEmail: 'inputemailhere@email.com' // Updated your email
 };
 
 // Theme Toggle

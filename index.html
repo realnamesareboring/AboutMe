@@ -32,13 +32,15 @@ layout: default
             <img src="{{ site.data.portfolio.personal.profileImage | relative_url }}" alt="{{ site.data.portfolio.personal.name }} Profile Picture">
         </div>
         <div class="about-text">
-            <h3>Threat_Hunter.exe</h3>
+            <h3>whoami.exe</h3>
             {% for paragraph in site.data.portfolio.personal.bio %}
             <p>{{ paragraph }}</p>
             {% endfor %}
         </div>
     </div>
 </section>
+
+<!-- Replace the Resume Section in your index.html with this updated version -->
 
 <!-- Resume Section -->
 <section id="resume" class="section">
@@ -51,10 +53,22 @@ layout: default
                 <h4>{{ job.title }}</h4>
                 <div class="company">{{ job.company }}</div>
                 <div class="date">{{ job.period }}</div>
-                <p>{{ job.description }}</p>
+                
+                {% if job.description.first %}
+                    <!-- If description is an array (multiple bullet points) -->
+                    <ul class="experience-bullets">
+                        {% for bullet in job.description %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <!-- If description is a single string (backward compatibility) -->
+                    <p>{{ job.description }}</p>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
+        
         <div class="resume-column">
             <h3>Education</h3>
             {% for edu in site.data.portfolio.education %}
@@ -62,7 +76,17 @@ layout: default
                 <h4>{{ edu.degree }}</h4>
                 <div class="company">{{ edu.institution }}</div>
                 <div class="date">{{ edu.period }}</div>
-                <p>{{ edu.description }}</p>
+                
+                {% if edu.description.first %}
+                    <!-- Support bullet points for education too -->
+                    <ul class="experience-bullets">
+                        {% for bullet in edu.description %}
+                        <li>{{ bullet }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>{{ edu.description }}</p>
+                {% endif %}
             </div>
             {% endfor %}
             
@@ -150,13 +174,14 @@ layout: default
                     {{ site.data.portfolio.personal.email }}
                 </div>
             </div>
+            <!-- Not being used
             <div class="contact-item">
                 <div class="contact-icon">#</div>
                 <div>
                     <strong>Phone</strong><br>
                     {{ site.data.portfolio.personal.phone }}
-                </div>
-            </div>
+                </div> 
+            </div> -->
             <div class="contact-item">
                 <div class="contact-icon">📍</div>
                 <div>

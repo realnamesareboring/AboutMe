@@ -1,9 +1,9 @@
 # Personal Information
 personal:
-  name: "JOSE L. TORRICO"
+  name: "JOSE L TORRICO"
   title: "Cloud Security Lead & Azure SME"
   tagline: "// Defending Digital Frontiers in the Cloud"
-  logo: "J.T"
+  logo: "J.TORRICO"
   email: "Jose.L.Torrico@outlook.com"
   phone: "+1 (703) 555-0123"  # Update with your actual phone
   location: "Washington, DC"
@@ -30,27 +30,86 @@ navigation:
   - label: "CONTACT"
     href: "#contact"
 
-# Experience
+# Update your _data/portfolio.yml - Experience section with bullet points
+
 experience:
   - title: "Cloud Security Lead"
     company: "NetCentrics/OneZero (CDM Defend Group A)"
     period: "Dec 2022 - Present"
-    description: "Lead Microsoft XDR implementation and RBAC design for USCG CSOC. Spearhead automation initiatives, train analysts, and conduct cloud security assessments for government customers."
+    description:
+      - "Implemented Microsoft XDR technologies to enhance security measures for USCG CSOC"
+      - "Spearheaded design and implementation of RBAC roles for cloud security-based tools"
+      - "Trained CSOC analysts on tools and best practices for incident management and administration"
+      - "Developed comprehensive documentation to support CSOC analysts and operations"
+      - "Served as Subject Matter Expert for Microsoft Defender XDR with cross-team collaboration"
+      - "Engineered automation-based rules, playbooks, and workbooks to reduce alert fatigue"
+      - "Conducted cloud security assessments for customer onboarding into Azure/AWS environments"
+      - "Facilitated brown bag and brainstorm sessions for continuous environment improvement"
+      - "Advised CGCYBER leadership on automation strategies for security operations efficiency"
+
   - title: "Cloud Security Architect"
     company: "Booz Allen Hamilton"
     period: "May 2022 - Dec 2022"
-    description: "Azure SME for government cloud migration projects. Designed security recommendations, led technical exchange meetings, and contributed to internal CTO investment projects with Terraform modules."
+    description:
+      - "Led as Azure SME for Cloud Migration Project for Government Customer"
+      - "Designed and implemented security recommendations based on customer requirements"
+      - "Guided internal teams as lead Azure Cloud Security Subject Matter Expert"
+      - "Contributed to internal CTO investment projects creating terraform modules for deployments"
+      - "Conducted Technical Exchange Meetings with customers and internal teams"
+      - "Tested and researched new service offerings within Microsoft Security ecosystem"
+
   - title: "Senior Information Security Engineer"
     company: "ManTech"
     period: "Apr 2018 - May 2022"
-    description: "Led Azure Sentinel SIEM migration for multi-tenancy logging. Managed Microsoft security stack including Defender for Endpoint, O365, and Endpoint Manager. Provided Tier 3 enterprise support."
+    description:
+      - "Served as SME for Azure Cloud Migration project implementation"
+      - "Led SIEM migration project to Azure Sentinel for multi-tenancy logging"
+      - "Advised customers on best practices for securing customer tenants"
+      - "Managed Microsoft security products: Defender for Endpoint, Defender for O365, Endpoint Manager"
+      - "Executed Proof of Concept projects evaluating products for security infrastructure needs"
+      - "Provided Tier 3/Enterprise support for all security infrastructure related issues"
+      - "Documented SOPs and performed disaster recovery planning of security products"
+      - "Supported SOC for Incident Response and summarized events during daily debriefs"
+
   - title: "Help Desk Specialist, Staff"
     company: "ManTech"
     period: "Nov 2015 - Apr 2018"
-    description: "Supervised team of four analysts, managed equipment deployment tracking, and established ManTech's first enterprise imaging lab network for laptop deployment."
+    description:
+      - "Supervised team of four Help Desk analysts overseeing deployment of enterprise equipment"
+      - "Managed equipment tracking and documentation for monthly accruals to accounting department"
+      - "Resolved day-to-day user issues ensuring high levels of customer satisfaction"
+      - "Analyzed metrics and ticket data to ensure SLA compliance and performance standards"
+      - "Documented information and updates in KB article database for future reference"
+      - "Configured and maintained ManTech's first Imaging Lab network for laptop deployment"
+
+  - title: "Desktop Support Specialist Tier II"
+    company: "DRS Technical Services"
+    period: "Feb 2010 - Nov 2015"
+    description:
+      - "Assisted staff with installation, configuration, and usability of desktop systems and software"
+      - "Ensured seamless interconnection of systems including validation, file, email, and application servers"
+      - "Assumed procurement specialist responsibilities during organizational transition with asset management"
+      - "Provided project support phasing out RSA tokens ensuring smooth security transition"
+      - "Managed and implemented Symantec Ghost solution for enterprise deployment efficiency"
 
 # Education
 education:
+  - degree: "CARTP: Certified Azure Red Team Professional"
+    institution: "Altered Security"
+    period: "May 2024"
+    description: "Advanced certification in Azure cloud penetration testing and red team operations"
+  - degree: "SEC560: Enterprise Penetration Testing"
+    institution: "SANS"
+    period: "August 2021"
+    description: "Advanced penetration testing methodologies for enterprise environments"
+  - degree: "SEC504: Hacker Tools, Techniques, and Incident Handling"
+    institution: "SANS"
+    period: "October 2020"
+    description: "Hands-on training in attack techniques and incident response procedures"
+  - degree: "SEC503: Network Monitoring and Threat Detection In-Depth"
+    institution: "SANS"
+    period: "December 2018"
+    description: "Advanced network security monitoring and threat hunting techniques"
   - degree: "Computer Network Systems"
     institution: "ITT Technical Institute"
     period: "2009 - 2010"
@@ -64,9 +123,6 @@ certifications:
   - name: "GIAC Certified Incident Handler (GCIH)"
     issuer: "GIAC"
     year: "2021"
-  - name: "Azure Security Engineer Associate (AZ-500)"
-    issuer: "Microsoft"
-    year: "2024"
   - name: "Security, Compliance, Identity Fundamentals (SC-900)"
     issuer: "Microsoft"
     year: "2022"
@@ -96,6 +152,8 @@ skills:
     tags:
       - "Defender for Endpoint"
       - "Defender for Cloud"
+      - "Defender for Identity"
+      - "Defender for Cloud Apps"
       - "Microsoft XDR"
       - "Endpoint Manager (Intune)"
       - "Azure Bastion"
@@ -118,7 +176,7 @@ skills:
       - "Python"
       - "Azure DevOps"
       - "Infrastructure as Code"
-  - category: "Legacy Security Tools"
+  - category: "Additional Security Tools"
     icon: "🔐"
     tags:
       - "Carbon Black (EDR/App Control)"
@@ -139,46 +197,39 @@ skills:
 
 # Projects
 projects:
-  - title: "Azure Security Lab Environment"
+  - title: "ATT4CKQL"
     icon: "🏗️"
-    description: "Personal Azure tenant with multiple VMs, Resource Groups, and Storage Accounts for simulating real-world MITRE ATT&CK TTPs and testing security controls."
+    url: "https://realnamesareboring.github.io/ATT4CKQL/"
+    description: "Comprehensive collection of Kusto Query Language (KQL) queries specifically designed for Microsoft Sentinel. These queries are mapped to MITRE ATT&CK techniques and are optimized to detect sophisticated threats across multiple detection sources."
     links:
-      - label: "Architecture"
-        url: "#"
-  - title: "USCG CSOC XDR Implementation"
+      - label: "Kusto"
+      - label: "Analytic Rules"
+      - label: "Hunting Rules"
+  - title: "KQLified"
     icon: "🚀"
-    description: "Led the design and implementation of Microsoft XDR technologies and RBAC roles for U.S. Coast Guard Cyber Security Operations Center."
+    url: "https://realnamesareboring.github.io/KQLified/"
+    description: "Master threat detection and investigation with hands-on KQL scenarios across Microsoft 365, Azure, AWS, and Kubernetes environments"
     links:
-      - label: "Case Study"
-        url: "#"
-  - title: "Multi-Tenant SIEM Migration"
-    icon: "🔄"
-    description: "Architected and executed migration from legacy SIEM to Azure Sentinel for multi-tenancy logging across government agencies."
+      - label: "Kusto"
+      - label: "Lab"
+  - title: "HelloNavigator"
+    icon: "🛸"
+    url: "https://realnamesareboring.github.io/HelloNavigator/"
+    description: "Flight of the Navigator themed CTF that engages a user with real world challenges that feature real commands from well known tools."
     links:
-      - label: "Methodology"
-        url: "#"
-  - title: "Automation Security Playbooks"
-    icon: "🤖"
-    description: "Developed comprehensive automation rules, playbooks, and workbooks to reduce alert fatigue and improve SOC analyst efficiency."
-    links:
-      - label: "Templates"
-        url: "#"
-  - title: "Terraform Security Modules"
-    icon: "🛠️"
-    description: "Created reusable Terraform modules for secure Azure deployments in greenfield and brownfield environments for enterprise customers."
+      - label: "CTF"
+      - label: "Retro"
+  - title: "Jekyll and Hire"
+    icon: "🧪"
+    url: "https://github.com/realnamesareboring/jekyll-and-hire"
+    description: "A modern, interactive portfolio website built with Jekyll, featuring a sleek tech-themed design perfect for developers and tech professionals (or anyone interested!). The idea is to, well, get hired!"
     links:
       - label: "GitHub"
-        url: "#"
-  - title: "P2S/S2S VPN Gateway Lab"
-    icon: "🔗"
-    description: "Implemented Point-to-Site and Site-to-Site VPN gateways with VNet peering to demonstrate secure network communications architecture."
-    links:
-      - label: "Demo"
-        url: "#"
-
+      - label: "Jekyll"
+        
 # SEO
 seo:
   title: "Jose L. Torrico Jr. - Cloud Security Lead & Azure SME"
   description: "Cloud Security Lead and Azure SME specializing in Microsoft XDR, Azure Sentinel, incident response, and government cloud security implementations."
   keywords: "cloud security, azure security, microsoft xdr, azure sentinel, penetration testing, incident response, government clearance, siem, automation"
-  ogImage: "/assets/img/og-image.jpg"
+  ogImage: "/assets/img/profile.jpg"
