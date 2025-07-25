@@ -11,42 +11,39 @@
 ## 📋 Table of Contents
 
 ### 🚀 Getting Started
-- [Overview](#-overview)
+- [Overview](#overview)
 - [Prerequisites](#prerequisites)
-- [Local Development Setup](#-local-development-setup)
+- [Local Development Setup](#local-development-setup)
 
 ### 📧 Contact Form Setup
-- [Contact Form Backend Setup](#-contact-form-backend-setup)
+- [Contact Form Backend Setup](#contact-form-backend-setup)
 - [Step 1: Create Google Form](#step-1-create-google-form-2-minutes)
 - [Step 2: Connect Google Sheet](#step-2-connect-google-sheet-30-seconds)
 - [Step 3: Deploy Google Apps Script](#step-3-deploy-google-apps-script-2-minutes)
 - [Step 4: Set Up Triggers](#step-4-set-up-the-trigger-30-seconds)
 - [Step 5: Get Form IDs](#step-5-get-form-ids-for-frontend-1-minute)
 - [Step 6: Update JavaScript](#step-6-update-your-javascript-30-seconds)
-- [Testing Your Setup](#-testing-your-setup)
+- [Testing Your Setup](#testing-your-setup)
 
 ### 🎨 Customization
-- [Customizing Your Content](#-customizing-your-content)
-- [Primary Content (portfolio.yml)](#-primary-content)
-- [Site Configuration](#-site-configuration)
-- [Site Configuration](-site-)
-- [YAML Editing Tips](🔧-yaml-editing-tips)
-- [Profile Image](#🖼️-profile-image)
-- [Deployment](#-deployment)
+- [Customizing the Portfolio YAML File](#customizing-the-portfolio-yaml-file)
+- [Customing the Site Configuration YAML File](#customing-the-site-configuration-yaml-file)
+- [YAML Editing Tips](#yaml-editing-tips)
+- [Profile Image](#profile-image)
+- [Deployment](#deployment)
 
 ### 🔧 Maintenance & Advanced
-- [Content Workflow](#-content-workflow)
-- [Important Files](#-important-files)
-- [Quick Setup Checklist](#-quick-setup-checklist)
-- [Troubleshooting](#-troubleshooting)
+- [Content Workflow](#content-workflow)
+- [Important Files](#important-files)
+- [Quick Setup Checklist](#quick-setup-checklist)
+- [Troubleshooting](#troubleshooting)
 
-
-### 📊 Additional Information
-- [Customization](#-customization-1)
 
 ---
 
-## 🌟 Overview
+## 🚀 Getting Started
+
+### Overview
 
 A responsive, professional portfolio website template with modern animations and interactive elements. **Completely free to use and deploy**
 
@@ -76,7 +73,7 @@ Before you begin, make sure you have:
 - **Bundler** - Install with `gem install bundler`
 - **Git** - [Download here](https://git-scm.com/)
 
-### 🔧 Local Development Setup
+### Local Development Setup
 
 1. **Clone the repository**
    ```bash
@@ -101,7 +98,9 @@ Before you begin, make sure you have:
 
 Your site will automatically reload when you make changes!
 
-## 📧 Contact Form Backend Setup
+## 📧 Contact Form Setup
+
+### Contact Form Backend Setup
 
 Your portfolio includes a fully functional contact form with Google Forms backend, email notifications, and spam protection. Here's how to set it up:
 
@@ -353,7 +352,7 @@ const CONTACT_FORM_CONFIG = {
 
 ---
 
-### **🧪 Testing Your Setup**
+### Testing Your Setup
 
 1. **Test the Apps Script:**
    - In Apps Script, run the `testEmails()` function
@@ -386,7 +385,9 @@ const CONTACT_FORM_CONFIG = {
 
 ---
 
-### 📝 Customizing Your Content
+## 🎨 Customization
+
+### Customizing the Portfolio YAML file
 
 **All your content is managed through two main files:**
 
@@ -397,6 +398,7 @@ File: `_data/portfolio.yml`
 This YAML file contains all your personal information, experience, and projects. Here's how to edit each section:
 
 **👤 Personal Information:**
+
 ```yaml
 personal:
   name: "Your Full Name"                    # Appears in hero section
@@ -416,6 +418,7 @@ personal:
 ```
 
 **💼 Professional Experience:**
+
 ```yaml
 experience:
   - title: "Your Job Title"                 # Position name
@@ -425,6 +428,7 @@ experience:
 ```
 
 **🎓 Education:**
+
 ```yaml
 education:
   - degree: "Bachelor of Computer Science"  # Degree name
@@ -434,6 +438,7 @@ education:
 ```
 
 **🏆 Certifications:**
+
 ```yaml
 certifications:
   - name: "AWS Certified"                   # Certification name
@@ -442,6 +447,7 @@ certifications:
 ```
 
 **💻 Skills:**
+
 ```yaml
 skills:
   - category: "Programming"                 # E.g., "Programming Languages"
@@ -453,6 +459,7 @@ skills:
 ```
 
 **🚀 Projects:**
+
 ```yaml
 projects:
   - title: "Project Name"                   # Project title
@@ -466,6 +473,7 @@ projects:
 ```
 
 **🧭 Navigation:**
+
 ```yaml
 navigation:
   - label: "HOME"
@@ -477,6 +485,7 @@ navigation:
 ```
 
 **🔍 SEO Settings:**
+
 ```yaml
 seo:
   title: "Your Name - Your Title"
@@ -485,7 +494,7 @@ seo:
   ogImage: "/assets/img/og-image.jpg"
 ```
 
-#### ⚙️ Site Configuration
+### Customing the Site Configuration YAML File
 
 File: `_config.yml`
 
@@ -499,7 +508,7 @@ author: "Your Name"
 google_analytics: "GA_MEASUREMENT_ID"  # Optional
 ```
 
-### 🔧 YAML Editing Tips
+### YAML Editing Tips
 
 **Important rules:**
 - Use spaces, not tabs for indentation
@@ -523,20 +532,24 @@ ruby -c _data/portfolio.yml
 ```
 Or use online: [yamllint.com](http://www.yamllint.com/)
 
-### 🖼️ Profile Image
+### Profile Image
 
 Add your photo to `assets/img/profile.jpg`
 - **Recommended:** 500x500px, JPG format, under 500KB
 
-### 🌐 Deployment
+### Deployment
 
 #### GitHub Pages (Free)
 1. Push code to GitHub
 2. Go to repository Settings → Pages
-3. Source: "Deploy from a branch" → "main"
-4. Your site: `https://yourusername.github.io/repository-name`
+3. Under Build and deployment select Source: "GitHub Actions"
+4. Click on Configure for GitHub Pages Jekyll
+5. Press on Commit changes on both windows
+6. Visit your your site once deployment is completed: `https://yourusername.github.io/repository-name`
 
-### 🔄 Content Workflow
+## 🔧 Maintenance & Advanced
+
+### Content Workflow
 
 **Update your portfolio in 4 steps:**
 
@@ -545,7 +558,7 @@ Add your photo to `assets/img/profile.jpg`
 3. **Deploy:** `git add . && git commit -m "Update content" && git push`
 4. **Wait 2-5 minutes** for GitHub Pages to rebuild
 
-### 📁 Important Files
+### Important Files
 
 **Files you'll edit regularly:**
 - `_data/portfolio.yml` - Your content
@@ -558,18 +571,17 @@ Add your photo to `assets/img/profile.jpg`
 - `assets/js/main.js` - Interactive features
 - `index.html` - Homepage template
 
-### 🔧 Quick Setup Checklist
+### Quick Setup Checklist
 
 **After cloning, customize these in order:**
+- **Step 1:** [Edit `_data/portfolio.yml`](#customizing-the-portfolio-yaml-file) - All your personal content
+- **Step 2:** [Update `_config.yml`](#customing-the-site-configuration-yaml-file) - Site title, URL, your name
+- **Step 3:** [Add profile image](#profile-image) - `assets/img/profile.jpg`
+- **Step 4:** [Set up contact form](#contact-form-backend-setup) - Follow the Contact Form Backend Setup section
+- **Step 5:** [Test locally](#local-development-setup) - `bundle exec jekyll serve`
+- **Step 6:** [Deploy](#deployment) - Push to GitHub and enable Pages
 
-- [ ] Update `_config.yml` - Site title, URL, your name
-- [ ] Edit `_data/portfolio.yml` - All your personal content
-- [ ] Add profile image - `assets/img/profile.jpg`
-- [ ] Set up contact form - Follow the Contact Form Backend Setup section
-- [ ] Test locally - `bundle exec jekyll serve`
-- [ ] Deploy - Push to GitHub and enable Pages
-
-### 🆘 Troubleshooting
+### Troubleshooting
 
 **Common issues and solutions:**
 
