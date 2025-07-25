@@ -12,8 +12,8 @@ personal:
   profileImage: "/assets/img/profile.jpg"
   bio:
     - "I'm a seasoned cloud security professional with over a decade of IT experience, specializing in Azure Cloud Security and Microsoft XDR technologies. I thrive on complex challenges and continuously adapt to the evolving cybersecurity landscape."
-    - "Currently serving as Cloud Security Lead, I've spearheaded major cloud migration projects, implemented cutting-edge security measures, and trained teams on best practices for incident management. My expertise spans from SIEM migrations to automation-based security operations."
-    - "With TS/SCI clearance and certifications from GIAC and Microsoft, I'm passionate about proactive security measures and believe every configuration matters when protecting critical government and enterprise systems."
+    - "Currently serving as a Cloud Security Lead, I've spearheaded major cloud migration projects, implemented cutting-edge security measures, and trained teams on best practices for securing cloud infrastructures. My expertise spans from SIEM migrations to automation-based security operations."
+    - "I'm passionate about proactive security measures and believe every configuration matters when protecting critical government and enterprise systems."
 
 # Navigation
 navigation:
